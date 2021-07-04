@@ -1,16 +1,18 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import {router} from './Routes/routes'
+import router from './Routes/routes.js'
+
 
 dotenv.config();
 const app = express();
-
+app.use(express.json());
 app.use('/api/v1', router);
-app.use();
 app.get("/", (request, response) => {
-    return response.json({
-        "status": 202,
-        "message": success
+    return response.status(200).json({
+        status: "success",
+        data: {
+            restaurant: ["mrbigss", "wendys"]
+        }
     })
 })
 
