@@ -10,7 +10,9 @@ export const pool = new Pool();
 
 export const getRestaurants = async (req, res) => {
     try{
+        
         let result = await pool.query('SELECT * FROM restaurants ORDER BY id ASC')
+        console.log(result)
         res.status(200).json({
             status: "success",
             result: result.rows.length,
