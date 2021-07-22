@@ -16,6 +16,7 @@ import { RestaurantsContextProvider } from "./context/RestaurantContext";
 
 const App = () => {
     return (
+        <>
     <RestaurantsContextProvider>
         <div className="container"> 
             <Router>
@@ -27,6 +28,7 @@ const App = () => {
             </Router>
         </div>
     </RestaurantsContextProvider>
+    </>
     )
 }
 

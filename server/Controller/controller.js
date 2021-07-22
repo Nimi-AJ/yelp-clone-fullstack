@@ -52,7 +52,7 @@ export const addRestaurant = async (req, res) => {
         console.log(result.rows);
         res.status(201).json({
             status: "success",
-            results: results.rows.length,
+            result: result.rows.length,
             data: {
                 restaurants: result.rows
             }
